@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Of ST</title>
+    <!-- tailwind css cdn -->
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1 class="text-5xl text-center p-12">Welcome To <span class="text-green-900 font-semibold">Bank Of ST</span>
+            Dashboard
+        </h1>
+    </header>
+    <main class="w-3/4 mx-auto">
+        <!-- balance and transection -->
+        <section>
+            <div class="grid grid-cols-3 gap-4">
+                <div class="bg-blue-300 rounded-sm p-5">
+                    <h2 class="text-4xl text-white">Deposit</h2>
+                    <h1 class=" text-5xl font-bold">$<span id="d-total">00</span></h1>
+                </div>
+                <div class="bg-green-300 rounded-sm p-5">
+                    <h2 class="text-4xl text-white">Withdraw</h2>
+                    <h1 class=" text-5xl font-bold">$<span id="w-total">100</span></h1>
+                </div>
+                <div class="bg-yellow-300 rounded-sm p-5">
+                    <h2 class="text-4xl text-white">Blance</h2>
+                    <h1 class=" text-5xl font-bold">$<span id="balance">1200</span></h1>
+                </div>
+            </div>
+        </section>
+        <!-- deposit and withdraw  -->
+        <section class="mt-5">
+            <div class="grid grid-cols-2 gap-5">
+                <div class="bg-blue-300 rounded-sm p-5 my-5">
+                    <h3 class="text-3xl text-center font-bold text-blue-900 py-5">Deposit Amount</h3>
+                    <div class="mx-auto">
+                        <input class="block w-full my-4 p-1 border-2 rounded-md" type="text" id="d-amount"
+                            placeholder="$ you want to deposit">
+
+                        <button id="d-submit"
+                            class="btn bg-blue-900 rounded text-gray-100 font-semibold px-5 py-1 mb-8 mx-auto"
+                            type="submit">Deposit</button>
+                    </div>
+                </div>
+                <div class="bg-green-300 rounded-sm p-5 my-5">
+                    <h3 class="text-3xl text-center font-bold text-yellow-900 py-5">Withdraw Amount</h3>
+                    <h2 id="error-msg" class="font-semibold text-red-700"></h2>
+                    <div class="mx-auto">
+                        <input class="block w-full my-4 p-1 border-2 rounded-md" type="text" id="w-amount"
+                            placeholder="$ amount you want to withdraw">
+
+                        <button id="w-submit"
+                            class="btn bg-yellow-900 rounded text-gray-100 font-semibold px-5 py-1 mx-auto"
+                            type="submit">Withdraw</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p class="text-center mt-8">All right reserved <span class="text-green-900 font-bold">Bank Of ST.</span>
+            Developed By <span class="font-bold">S Imran
+                Ahmed</span></p>
+    </footer>
+    <script src="js/banking.js"></script>
+</body>
+
+</html>
